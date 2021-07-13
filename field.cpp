@@ -79,9 +79,9 @@ int effective_f(double Bx_ani, double By_ani, double Bz_ani,
 {
 	//calculates the total field (effective) components
 
-	Bx_eff = Bx_ani + Bx_app;
-	By_eff = By_ani + By_app;
-	Bz_eff = Bz_ani + Bz_app;
+	Bx_eff = Bx_ani + Bx_app + Bx_lon;
+	By_eff = By_ani + By_app + By_lon;
+	Bz_eff = Bz_ani + Bz_app + Bz_lon;
 
 	return 0;
 
@@ -96,6 +96,10 @@ int calculate()
 
 	field::zeeman_f(input::B_app, input::bx, input::by, input::bz,
 					field::Bx_app, field::By_app, field::Bz_app);
+
+	field::longitudinal_f(particle::mx, particle::my, particle::mz,
+			   		      input::chi_par, input::m_e,
+				          field::Bx_lon, field::By_lon, field::Bz_lon);
 
 	field::effective_f(field::Bx_ani, field::By_ani, field::Bz_ani,
 					   field::Bx_app, field::By_app, field::Bz_app,

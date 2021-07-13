@@ -28,7 +28,8 @@ const double Ms_SI = Ms_CGS*1e3; //Saturation magnetisation: [A/m]
 const double K_SI = K_CGS*1e-1; //: Magnetocrystlline first-order anis. constant: [J/m^3]
 const double volume = a*a*a; // Macrospin volume: [m^3]
 const double lambda = 0.1; // Microscopic coupling constant: adimensional
-
+const double chi_par = 0.0; //Parallel susceptibility: []
+const double chi_perp = 0.0; //Perpendicular susceptibility: []
 
 //---Simulation paramters
 const double T = 0.0; // Magnetic moment temperature (electron temperature in this model): [K]
