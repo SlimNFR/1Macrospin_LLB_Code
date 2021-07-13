@@ -20,6 +20,11 @@ namespace tempscaling{
 //---Functions
 
 
+int alpha_par_f(double T, double Tc, double lambda,double &alpha_par);
+int alpha_perp_f(double T, double Tc, double lambda, double &alpha_perp);
+
+
+
 }
 
 #endif

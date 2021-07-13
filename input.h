@@ -30,6 +30,7 @@ const double volume = a*a*a; // Macrospin volume: [m^3]
 const double lambda = 0.1; // Microscopic coupling constant: adimensional
 const double chi_par = 0.0; //Parallel susceptibility: []
 const double chi_perp = 0.0; //Perpendicular susceptibility: []
+const double m_e = 0.0; //Equilibrium magnetisation: []
 
 //---Simulation paramters
 const double T = 0.0; // Magnetic moment temperature (electron temperature in this model): [K]
