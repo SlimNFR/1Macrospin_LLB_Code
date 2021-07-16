@@ -10,8 +10,9 @@
 #include"dynamics.h"
 #include"particle.h"
 #include"field.h"
+#include"init.h"
 #include"tempscaling.h"
-#include"output.h"
+#include"interpolate.h"
 
 int main()
 {
@@ -58,12 +59,11 @@ solver::heun_scheme(&dynamics::LLB_equation,
 					solver::sim_time, particle::mx,particle::my,particle::mz);
 */
 
-output::open_files_to_write();
-tempscaling::m_vs_T_curve_f(input::Tc,input::eps,output::file_NR,output::file_interpol);
-
-
-
-
+init::internal::run();
+double temp_me;
+double temp_T=355.5;
+tempscaling::equilibrium_magn_f(temp_T, cubicspline::x_interpol, cubicspline::y_interpol, cubicspline::b, cubicspline::c, cubicspline::d, temp_me);
+std::cout<<"T: "<<temp_T<<"| me:"<<temp_me<<"\n";
 }
 
 

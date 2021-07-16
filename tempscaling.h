@@ -7,6 +7,7 @@
 //---Standard libraries
 #include<iostream>
 #include<fstream>
+#include<vector>
 
 //---User-defined libraries
 
@@ -16,18 +17,38 @@
 namespace tempscaling{
 	
 //---Variables
-extern bool m_vs_T_curve;
+
 
 //---Functions
-//instantaneous parameters
+//obtain instantaneous parameters
 int alpha_par_f(double T, double Tc, double lambda,double &alpha_par);
 int alpha_perp_f(double T, double Tc, double lambda, double &alpha_perp);
-int equilibrium_magn_f();
-
-//equilibrium curves
-int m_vs_T_curve_f(double Tc, double eps, std::ofstream &f1, std::ofstream &f2);
+int equilibrium_magn_f(double T, std::vector<double> x_interpol, std::vector<double> y_interpol,
+					   std::vector<double> b,std::vector<double> c,std::vector<double> d, double &m_e);
 
 
+//obtain equilibrium curves
+int m_vs_T_curve_f(double Tc, double eps,
+				   std::vector<double>x_interpol, std::vector<double>y_interpol,
+				   std::vector<double>b, std::vector<double>c, std::vector<double>d,			 	
+				   std::ofstream &f1, std::ofstream &f2);
+
+//others..
+int get_mVsT_points_to_interpol(double Tc, double eps, std::vector<double> &x_interpol, std::vector<double> &y_interpol);
+int interpolate_mVsT_points(std::vector<double>x_interpol, std::vector<double>y_interpol,
+							std::vector<double> &b, std::vector<double> &c, std::vector<double> &d);
+
+}
+
+
+namespace tempscaling{
+
+
+
+	namespace internal{
+		int obtain_interpolation_polynome_mVsT_data();
+		int call_mVsT_sim();
+	}
 }
 
 #endif

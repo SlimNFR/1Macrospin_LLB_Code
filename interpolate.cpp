@@ -24,7 +24,7 @@ double polynome(double a, double b, double c,double d, double x, double xj)
 }
 
 
-double get_xinterval_id(std::vector<double>x_arr, double x, int &id)
+int get_xinterval_id(std::vector<double>x_arr, double x, int &id)
 {	//This function determines the spline interval corresponding to the x variable. 
 
     for(int i=0;i<x_arr.size()-1;i++)
@@ -44,12 +44,12 @@ double get_xinterval_id(std::vector<double>x_arr, double x, int &id)
 }
 
 
-double interpolate(int n, std::vector<double> x,std::vector<double> a,
-                   std::vector<double> &b, std::vector<double> &c, std::vector<double> &d)
+int interpolate(int n, std::vector<double> x,std::vector<double> a,
+                std::vector<double> &b, std::vector<double> &c, std::vector<double> &d)
 {	//This function interpolates the given x and a set of points using the Cubic Spline method
     //Array named a is y which in turn represents f evaluated at x!
     /** Numerical Analysis 9th ed - Burden, Faires (Ch. 3 Natural Cubic Spline, Pg. 149) */
-    
+
     std::vector<double> h(n), A(n), l(n + 1),u(n + 1), z(n+1);
 
     // Step 1 /

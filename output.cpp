@@ -7,7 +7,7 @@
 
 //---User-defined libraries
 #include"output.h"
-#include"tempscaling.h"
+#include"input.h"
 
 //---Namespace output
 
@@ -21,13 +21,13 @@ std::ofstream file_NR, file_interpol;
 int open_files_to_write()
 {
 
-	if(tempscaling::m_vs_T_curve == true)
+	if(input::m_vs_T_curve == true)
 	{
 		output::file_NR.open("output_NR.txt", std::ofstream::out);
 		output::file_interpol.open("output_interpol.txt", std::ofstream::out);
 	}
 
-	
+
 	return 0;
 }
 

@@ -53,6 +53,10 @@ const double mx_0 = 1.0;
 const double my_0 = 0.0;
 const double mz_0 = 0.0;
 
+//---Simulation
+
+const bool m_vs_T_curve = true;
+
 
 }
 
