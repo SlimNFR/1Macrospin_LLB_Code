@@ -10,6 +10,8 @@
 #include"dynamics.h"
 #include"particle.h"
 #include"field.h"
+#include"tempscaling.h"
+#include"output.h"
 
 int main()
 {
@@ -47,13 +49,17 @@ field::effective_f(field::Bx_ani, field::By_ani, field::Bz_ani,
 
 //std::cout<<"x_eff: "<<field::Bx_eff<<"|y_eff: "<<field::By_eff<<"|z_eff: "<<field::Bz_eff<<"|x_ani: "<<field::Bx_ani<<"|y_ani: "<<field::By_ani<<"|z_ani: "<<field::Bz_ani<<"\n";
 
-
+/*
 solver::heun_scheme(&dynamics::LLB_equation,
 					input::mx_0, input::my_0, input::mz_0,
 					input::gamma, input::alpha_par, input::alpha_perp,
 					input::t_min, input::t_max, input::delta_t, 
 					field::Bx_eff, field::By_eff, field::Bz_eff,
 					solver::sim_time, particle::mx,particle::my,particle::mz);
+*/
+
+output::open_files_to_write();
+tempscaling::m_vs_T_curve_f(input::Tc,input::eps,output::file_NR,output::file_interpol);
 
 
 
