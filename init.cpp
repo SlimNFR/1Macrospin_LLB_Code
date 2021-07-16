@@ -42,6 +42,10 @@ int sim()
 		tempscaling::internal::call_mVsT_sim();
 	}
 
+	if(input::chipar_vs_T_curve==true)
+	{
+		tempscaling::internal::call_chiparVsT_sim();
+	}
 
 	return 0;
 	

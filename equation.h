@@ -20,6 +20,7 @@ namespace equation{
 //---Functions
 double CurieWeiss_f(double x, double T, double Tc, double eps);
 double CurieWeiss_df(double x, double T, double Tc, double eps);
+double Langevin_df(double T, double Tc, double eps, double m_e);
 
 
 }

@@ -20,7 +20,6 @@ namespace tempscaling{
 //---Variables
 
 
-
 //---Functions
 
 int alpha_par_f(double T, double Tc, double lambda,double &alpha_par)
@@ -46,9 +45,41 @@ int equilibrium_magn_f(double T, std::vector<double> x_interpol, std::vector<dou
 
 	cubicspline::get_xinterval_id(x_interpol, T, id);
 	m_e=cubicspline::polynome(y_interpol[id],b[id],c[id],d[id],T,x_interpol[id]);
-	return m_e;
+	return 0;
 }
 
+int chi_par_f(double (*dLangevin)(double, double, double, double),
+			  double T, double Tc, double mu_s, double m_e, double eps, double &chi_par)
+{	//calculates the parallel susceptibility for a given temperature T
+	double kb=input::k_B;
+	double dL=dLangevin(T, Tc, eps,m_e);
+	chi_par = (mu_s/kb)*(dL/(T-3*(Tc/eps)*dL));
+
+	return 0;
+}
+
+
+
+int chipar_vs_T_curve_f(double Tc, double eps, 
+						double mu_s,
+						std::vector<double>x_interpol, std::vector<double>y_interpol,
+						std::vector<double>b, std::vector<double>c, std::vector<double>d,
+						std::ofstream &f1)
+{
+	int T;
+	double m_e;
+	double chi_par;
+
+	//Loop temperatures and print to file
+	for(T=0; T<=Tc; T++)
+	{
+		tempscaling::equilibrium_magn_f((double)T, x_interpol,y_interpol,b,c,d,m_e);
+		tempscaling::chi_par_f(equation::Langevin_df, T, Tc, mu_s,m_e, eps, chi_par);
+		f1<<T<<" "<<chi_par<<"\n";
+	}
+
+	return 0;
+}
 
 
 int m_vs_T_curve_f(double Tc, double eps,
@@ -72,11 +103,8 @@ int m_vs_T_curve_f(double Tc, double eps,
 	    //std::cout<<T<<" "<<cubicspline::y_interpol[id]<<" "<<cubicspline::b[id]<<" "<<cubicspline::c[id]<<" "<<cubicspline::d[id]<<"\n";
 
 	    //print to file the interpolated data
-	    f2<<T<<" "<<cubicspline::polynome(y_interpol[id],b[id],c[id],d[id],T,x_interpol[id])<<"\n";
+	    f2<<T<<" "<<cubicspline::polynome(y_interpol[id],b[id],c[id],d[id],T,x_interpol[id])<<"\n"; //cubicspline::polynome(..)=m_e...
 	}
-
-	f1.close();
-	f2.close();
 
 	return 0;
 }
@@ -174,11 +202,19 @@ namespace tempscaling{
 		}
 
 		int call_mVsT_sim()
-		{	//this function will output the m_e(T) data.
+		{	//this function will run a simulation to obtain the full me_vs(T) curve.
 			tempscaling::m_vs_T_curve_f(input::Tc, input::eps, 
 										cubicspline::x_interpol, cubicspline::y_interpol,
 										cubicspline::b, cubicspline::c, cubicspline::d,
 										output::file_NR, output::file_interpol);
+			return 0;
+		}
+
+		int call_chiparVsT_sim()
+		{	//this function will run a simulation to obtain the full me_vs(T) curve.
+			tempscaling::chipar_vs_T_curve_f(input::Tc, input::eps,input::mu_s,
+											 cubicspline::x_interpol, cubicspline::y_interpol,
+											 cubicspline::b,cubicspline::c, cubicspline::d, output::file_chi_vs_T);
 			return 0;
 		}
 

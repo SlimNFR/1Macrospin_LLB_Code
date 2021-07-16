@@ -15,7 +15,7 @@ namespace output{
 	
 //---Variables
 std::ofstream file_NR, file_interpol;
-
+std::ofstream file_chi_vs_T;
 
 //---Functions
 int open_files_to_write()
@@ -27,8 +27,32 @@ int open_files_to_write()
 		output::file_interpol.open("output_interpol.txt", std::ofstream::out);
 	}
 
+	if(input::chipar_vs_T_curve == true)
+	{
+		output::file_chi_vs_T.open("output_chi_vs_T.txt", std::ofstream::out);
+	}
+
+
 
 	return 0;
+}
+
+int close_files()
+{
+
+	if(input::m_vs_T_curve == true)
+	{
+		output::file_NR.close();
+		output::file_interpol.close();
+	}
+
+	if(input::chipar_vs_T_curve == true)
+	{
+		output::file_chi_vs_T.close();
+	}
+
+	return 0;
+
 }
 
 }

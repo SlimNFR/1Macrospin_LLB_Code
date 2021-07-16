@@ -16,10 +16,12 @@
 namespace output{
 	
 //---Variables
-extern std::ofstream file_NR, file_interpol;
+extern std::ofstream file_NR, file_interpol; 
+extern std::ofstream file_chi_vs_T;
 
 //---Functions
 int open_files_to_write();
+int close_files();
 
 }
 

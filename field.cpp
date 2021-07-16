@@ -91,7 +91,7 @@ int calculate()
 {
 	field::uniax_anis_f(particle::mx, particle::my, particle::mz,
 						input::ex, input::ey, input::ez,
-						input::K_SI, input::Ms_SI, 
+						input::K_T, input::Ms_T, 
 						field::Bx_ani, field::By_ani, field::Bz_ani);
 
 	field::zeeman_f(input::B_app, input::bx, input::by, input::bz,

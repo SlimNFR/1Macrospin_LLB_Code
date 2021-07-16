@@ -13,6 +13,7 @@
 #include"init.h"
 #include"tempscaling.h"
 #include"interpolate.h"
+#include"output.h"
 
 int main()
 {
@@ -64,7 +65,14 @@ double temp_me;
 double temp_T=355.5;
 tempscaling::equilibrium_magn_f(temp_T, cubicspline::x_interpol, cubicspline::y_interpol, cubicspline::b, cubicspline::c, cubicspline::d, temp_me);
 std::cout<<"T: "<<temp_T<<"| me:"<<temp_me<<"\n";
+
+output::close_files();
+
+return 0;
 }
+
+
+
 
 
 //---End of main.cpp file
