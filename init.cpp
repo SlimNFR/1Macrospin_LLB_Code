@@ -10,6 +10,7 @@
 #include"input.h"
 #include"output.h"
 #include"simulation.h"
+#include"particle.h"
 
 //---Namespace init
 
@@ -58,6 +59,8 @@ int sim()
 	{
 		tempscaling::internal::calc_parameters_at_T();
 		simulation::equilibrate_system(input::mx_0, input::my_0, input::mz_0,
+									   particle::mx, particle::my, particle::mz,
+									   simulation::time,
 							   		   input::t_min_equil, input::t_max_equil, input::delta_t_equil, input::timescale_equil, 
 							   		   output::file_magn_vs_time_equilibrate);
 

@@ -11,13 +11,18 @@
 namespace particle{
 	
 //---Variables
-double mx=0.0;
-double my=0.0;
-double mz=0.0;
+double mx;
+double my;
+double mz;
 
 
 //---Functions
-
+int update_magnetisation(double mx_in,double my_in, double mz_in,
+						 double &mx, double &my, double &mz)
+{
+	mx = mx_in; my = my_in; mz = mz_in;
+	return 0;
+}
 
 }
 

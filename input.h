@@ -51,10 +51,16 @@ const double ey = 0.0; // H_ani_y
 const double ez = 1.0; // H_ani_z
 extern double alpha_par; //Longitudinal damping parameter: adimensional. Avail. only for T<Tc
 extern double alpha_perp; //Transversal damping parameter: adimensional. Avail. only for T<Tc
+
 const int t_min_equil=0; // Time will be given as an integer. It needs to be multiplied with 10^-12 at the end.
-const int t_max_equil=3000;
+const int t_max_equil=30000;
 const int delta_t_equil=1;
-const double timescale_equil=1e-12;
+const double timescale_equil=10*1e-15;
+
+
+const int t_min_laser_dynamics=0;
+const int t_max_laser_dynamics=40000;
+const double timescale_laser_dynamics = 1e-15;
 
 //---Initial conditions
 const double mx_0 = 1.0;

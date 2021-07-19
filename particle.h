@@ -20,7 +20,8 @@ extern double my;
 extern double mz;
 
 //---Functions
-
+int update_magnetisation(double mx_in,double my_in, double mz_in,
+						 double &mx, double &my, double &mz);
 
 }
 
