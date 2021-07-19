@@ -28,8 +28,15 @@ int equilibrium_magn_f(double T, std::vector<double> x_interpol, std::vector<dou
 int chi_par_f(double (*dLangevin)(double, double, double, double),
 			  double T, double Tc, double mu_s, double m_e, double eps, double &chi_par);
 
+int K_at_T_f(double K0_SI, double m_e, double &K_T);
+int Ms_at_T_f(double Ms0_SI, double m_e, double &Ms_T);
+
 
 //obtain equilibrium curves
+int K_vs_T_curve_f(double Tc, double K0_SI,
+				   std::vector<double> x_interpol, std::vector<double>y_interpol,
+				   std::vector<double> b, std::vector<double> c, std::vector<double> d,std::ofstream &f1);
+
 int chipar_vs_T_curve_f(double Tc, double eps, 
 						double mu_s,
 						std::vector<double>x_interpol, std::vector<double>y_interpol,
@@ -57,6 +64,8 @@ namespace tempscaling{
 		int obtain_interpolation_polynome_mVsT_data();
 		int call_mVsT_sim();
 		int call_chiparVsT_sim();
+		int call_KVsT_sim();
+		int calc_parameters_at_T();
 	}
 }
 

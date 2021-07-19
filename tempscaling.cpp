@@ -48,16 +48,56 @@ int equilibrium_magn_f(double T, std::vector<double> x_interpol, std::vector<dou
 	return 0;
 }
 
+
+
+
 int chi_par_f(double (*dLangevin)(double, double, double, double),
 			  double T, double Tc, double mu_s, double m_e, double eps, double &chi_par)
 {	//calculates the parallel susceptibility for a given temperature T
+
 	double kb=input::k_B;
 	double dL=dLangevin(T, Tc, eps,m_e);
+	if(T==0)return 0;
 	chi_par = (mu_s/kb)*(dL/(T-3*(Tc/eps)*dL));
 
 	return 0;
 }
 
+int K_at_T_f(double K0_SI, double m_e, double &K_T)
+{
+
+	K_T = K0_SI * pow(m_e,3.0);
+
+	return 0;
+}
+
+
+int Ms_at_T_f(double Ms0_SI, double m_e, double &Ms_T)
+{
+
+	Ms_T = Ms0_SI*m_e;
+
+	return 0;
+}
+
+
+int K_vs_T_curve_f(double Tc, double K0_SI,
+				   std::vector<double> x_interpol, std::vector<double>y_interpol,
+				   std::vector<double> b, std::vector<double> c, std::vector<double> d,std::ofstream &f1)
+{
+	int T;
+	double m_e;
+	double K_T;
+
+	for(T=0; T<=Tc; T++)
+	{
+		tempscaling::equilibrium_magn_f((double)T, x_interpol,y_interpol,b,c,d,m_e);
+		tempscaling::K_at_T_f(K0_SI, m_e, K_T);
+		f1<<T<<" "<<K_T/K0_SI<<"\n";
+
+	}
+	return 0;
+}
 
 
 int chipar_vs_T_curve_f(double Tc, double eps, 
@@ -216,6 +256,33 @@ namespace tempscaling{
 											 cubicspline::x_interpol, cubicspline::y_interpol,
 											 cubicspline::b,cubicspline::c, cubicspline::d, output::file_chi_vs_T);
 			return 0;
+		}
+
+		int call_KVsT_sim()
+		{
+
+
+			tempscaling::K_vs_T_curve_f(input::Tc, input::K0_SI, 
+										cubicspline::x_interpol, cubicspline::y_interpol,
+										cubicspline::b, cubicspline::c, cubicspline::d, output::file_K_vs_T);
+
+			return 0;
+
+		}
+
+
+		int calc_parameters_at_T()
+		{
+			tempscaling::alpha_par_f(input::T, input::Tc, input::lambda, input::alpha_par);
+			tempscaling::alpha_perp_f(input::T, input::Tc, input::lambda, input::alpha_perp);
+			tempscaling::equilibrium_magn_f(input::T, cubicspline::x_interpol, cubicspline::y_interpol,
+											cubicspline::b, cubicspline::c, cubicspline::d, input::m_e);
+			tempscaling::chi_par_f(equation::Langevin_df, input::T, input::Tc, input::mu_s, input::m_e, input::eps, input::chi_par);
+			tempscaling::Ms_at_T_f(input::Ms0_SI, input::m_e, input::Ms_T);
+			tempscaling::K_at_T_f(input::K0_SI, input::m_e, input::K_T);
+			
+			return 0;
+
 		}
 
 	}

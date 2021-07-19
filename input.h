@@ -40,18 +40,21 @@ const double eps = 1.0; //SW correction factor: adim.
 
 //---Simulation paramters
 extern double T; // Magnetic moment temperature (electron temperature in this model): [K]
-const double B_app = 0.5; // External field amplitude: [T]
-const double bx = 0.8; // H_ext_x/H_ext 
-const double by = 0.6; // H_ext_y/H_ext
-const double bz = 0.0; // H_ext_z/H_ext
+extern double B_app; // External field amplitude: [T]
+extern double B_theta;//angle with respect to EA
+extern double B_phi; //Angle between in-plane field projection and the Ox axis
+extern double bx;// H_ext_x/H_ext 
+extern double by; // H_ext_y/H_ext
+extern double bz; // H_ext_z/H_ext
 const double ex = 0.0; // H_ani_x
 const double ey = 0.0; // H_ani_y
 const double ez = 1.0; // H_ani_z
 extern double alpha_par; //Longitudinal damping parameter: adimensional. Avail. only for T<Tc
 extern double alpha_perp; //Transversal damping parameter: adimensional. Avail. only for T<Tc
-const int t_min=0; // Time will be given as an integer. It needs to be multiplied with 10^-12 at the end.
-const int t_max=3000;
-const int delta_t=1;
+const int t_min_equil=0; // Time will be given as an integer. It needs to be multiplied with 10^-12 at the end.
+const int t_max_equil=3000;
+const int delta_t_equil=1;
+const double timescale_equil=1e-12;
 
 //---Initial conditions
 const double mx_0 = 1.0;
@@ -60,8 +63,10 @@ const double mz_0 = 0.0;
 
 //---Simulation
 
-const bool m_vs_T_curve = true;
-const bool chipar_vs_T_curve = true;
+const bool m_vs_T_curve = false;
+const bool chipar_vs_T_curve = false;
+const bool K_vs_T_curve = false;
+const bool equilibrate = true;
 
 
 }

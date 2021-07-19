@@ -9,6 +9,7 @@
 #include"tempscaling.h"
 #include"input.h"
 #include"output.h"
+#include"simulation.h"
 
 //---Namespace init
 
@@ -45,6 +46,21 @@ int sim()
 	if(input::chipar_vs_T_curve==true)
 	{
 		tempscaling::internal::call_chiparVsT_sim();
+	}
+
+	if(input::K_vs_T_curve==true)
+	{
+
+		tempscaling::internal::call_KVsT_sim();
+	}
+
+	if(input::equilibrate==true)
+	{
+		tempscaling::internal::calc_parameters_at_T();
+		simulation::equilibrate_system(input::mx_0, input::my_0, input::mz_0,
+							   		   input::t_min_equil, input::t_max_equil, input::delta_t_equil, input::timescale_equil, 
+							   		   output::file_magn_vs_time_equilibrate);
+
 	}
 
 	return 0;

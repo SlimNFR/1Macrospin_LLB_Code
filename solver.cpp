@@ -18,33 +18,19 @@ int sim_time = 0;
 
 //---Functions
 
-int heun_scheme(int (*dfunc)(double, double, double,
-				double, double, double,
-				double, double, double,
-				double &,double &,double &),
-				double mx_0,double my_0, double mz_0,
-				double gamma, double alpha_par, double alpha_perp,
-				int t_min, int t_max, int delta_t,
-				double &Bx_eff, double &By_eff, double &Bz_eff,
-				int &t, double &mx_n1, double &my_n1, double &mz_n1)
-{
+int heun_scheme_step(int (*dfunc)(double, double, double,
+					 double, double, double,
+					 double, double, double,
+					 double &,double &,double &),
+					 double mx_0,double my_0, double mz_0,
+					 double gamma, double alpha_par, double alpha_perp,
+					 int delta_t, double timescale, //timescale variable should be intialised to 1ps or 1ns or 1fs depending on the timescale of my sim
+					 double Bx_eff, double By_eff, double Bz_eff,
+					 double &mx_n1, double &my_n1, double &mz_n1)
+{	//This function returns the next magnetisatino step given initial conditions and parameters for the LLB equation.
 	double fx_0,fy_0,fz_0 = 0.0;
 	double fx_n,fy_n,fz_n = 0.0;
-	double REAL_T, REAL_DT;
-	std::ofstream f1;
-  	f1.open("output.txt", std::ofstream::out);
-	
-	mx_n1 = mx_0;
-	my_n1 = my_0;
-	mz_n1 = mz_0;
-
-	for(t=t_min; t<=t_max; t=t+delta_t)
-	{
-		REAL_T = t*1e-12;// the for loop imaginary time transformed in ps
-		REAL_DT = delta_t*1e-12;// the for loop imaginary time step transformed in ps
-
-		f1<<REAL_T<<" "<<mx_n1<<" "<<my_n1<<" "<<mz_n1<<"\n";
-		field::calculate();
+	double REAL_DT = delta_t*timescale;// the for loop imaginary time step transformed in ps;
 
 		/*
 		std::cout<<"|fx_0: "<<fx_0<<"|fy_0: "<<fy_0<<"|fz_0: "<<fz_0
@@ -66,16 +52,6 @@ int heun_scheme(int (*dfunc)(double, double, double,
 				 <<"|fx_0 + fx_n: "<<fx_0 + fx_n<<"|fy_0 + fy_n: "<<fy_0 + fy_n<<"|fz_0 + fz_n: "<<fz_0 + fz_n
 				 <<"|REAL_DT: "<<REAL_DT<<"\n";
 		*/
-
-		mx_0 = mx_n1;
-		my_0 = my_n1;
-		mz_0 = mz_n1;
-
-
-	}
-
-	f1.close();
-
 
 	return 0;
 

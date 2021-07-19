@@ -29,6 +29,8 @@ int uniax_anis_f(double mx, double my, double mz,
 	
 	double Hk=2.0*K/Ms; //Anisotropy field strength [T]
 
+	//std::cout<<"Ms inside uniax field func: "<<Ms<<"\n";
+
 	Bx_ani = Hk*(mx*ex + my*ey + mz*ez)*ex;
 	By_ani = Hk*(mx*ex + my*ey + mz*ez)*ey;
 	Bz_ani = Hk*(mx*ex + my*ey + mz*ez)*ez;
@@ -45,6 +47,7 @@ int zeeman_f(double B_app, double bx, double by, double bz,
 			 double &Bx_app, double &By_app, double &Bz_app)
 {
 	//calculates the zeeman field components
+	//std::cout<<"Inside zeeman field function"<<"bx: "<<bx<<"|by: "<<by<<"|bz: "<<bz<<"|B_app: "<<B_app<<"\n";
 	Bx_app=B_app*bx;
 	By_app=B_app*by;
 	Bz_app=B_app*bz;
@@ -60,6 +63,7 @@ int longitudinal_f(double mx, double my, double mz,
 	//calculates the longitudinal field components
 	//I assume I work below Tc for now
 
+	if(input::T==0){Bx_lon=0;By_lon=0;Bz_lon=0; return 0;}
 	//Temporary variables
 	double m_squared = mx*mx + my*my + mz*mz;
 	double pre_factor = (1/(2*chi_par)) * (1- (m_squared/(m_e*m_e)) );
