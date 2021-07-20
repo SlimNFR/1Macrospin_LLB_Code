@@ -107,9 +107,9 @@ namespace init{
 		{
 
 			output::close_files();
-			init::RUN_TIME_START=std::chrono::high_resolution_clock::now();
-			init::RUN_TIME_TOTAL=std::chrono::duration_cast<std::chrono::seconds>(init::RUN_TIME_END - init::RUN_TIME_END).count();
-			std::cout<<"Total run time: "<<init::RUN_TIME_TOTAL<<" s"<<"\n";
+			init::RUN_TIME_END=std::chrono::high_resolution_clock::now();
+			init::RUN_TIME_TOTAL=std::chrono::duration_cast<std::chrono::nanoseconds>(init::RUN_TIME_END - init::RUN_TIME_START).count();
+			std::cout<<"Total run time: "<<init::RUN_TIME_TOTAL*1e-9<<" s"<<"\n";
 			return 0;
 
 		}	
