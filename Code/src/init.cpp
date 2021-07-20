@@ -99,7 +99,7 @@ namespace init{
 			init::RUN_TIME_START=std::chrono::high_resolution_clock::now();
 			init::parameters();
 			init::files();
-			init:sim();
+			init::sim();
 			return 0;
 		}
 

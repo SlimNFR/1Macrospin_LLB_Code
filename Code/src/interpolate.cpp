@@ -27,7 +27,7 @@ double polynome(double a, double b, double c,double d, double x, double xj)
 int get_xinterval_id(std::vector<double>x_arr, double x, int &id)
 {	//This function determines the spline interval corresponding to the x variable. 
 
-    for(int i=0;i<x_arr.size()-1;i++)
+    for(long unsigned int i=0;i<x_arr.size()-1;i++)
     {
 
         if(x_arr[i]<= x && x <= x_arr[i+1])

@@ -43,7 +43,7 @@ int chipar_vs_T_curve_f(double Tc, double eps,
 						std::vector<double>b, std::vector<double>c, std::vector<double>d,
 						std::ofstream &f1);
 
-int m_vs_T_curve_f(double Tc, double eps,
+int m_vs_T_curve_f(double Tc,
 				   std::vector<double>x_interpol, std::vector<double>y_interpol,
 				   std::vector<double>b, std::vector<double>c, std::vector<double>d,			 	
 				   std::ofstream &f1, std::ofstream &f2);

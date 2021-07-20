@@ -122,16 +122,15 @@ int chipar_vs_T_curve_f(double Tc, double eps,
 }
 
 
-int m_vs_T_curve_f(double Tc, double eps,
+int m_vs_T_curve_f(double Tc, 
 				   std::vector<double>x_interpol, std::vector<double>y_interpol,
 				   std::vector<double>b, std::vector<double>c, std::vector<double>d,			 	
 				   std::ofstream &f1, std::ofstream &f2)
 {	//Calculates the whole m_e(T) curve.
 	int T;
-	double m_e;
 
 	//print to file the NR data
-	for(int i=0; i<x_interpol.size(); i++)
+	for(long unsigned int i=0; i<x_interpol.size(); i++)
 	{
 		f1<<x_interpol[i]<<" "<<y_interpol[i]<<"\n";
 	}
@@ -243,7 +242,7 @@ namespace tempscaling{
 
 		int call_mVsT_sim()
 		{	//this function will run a simulation to obtain the full me_vs(T) curve.
-			tempscaling::m_vs_T_curve_f(input::Tc, input::eps, 
+			tempscaling::m_vs_T_curve_f(input::Tc,  
 										cubicspline::x_interpol, cubicspline::y_interpol,
 										cubicspline::b, cubicspline::c, cubicspline::d,
 										output::file_Meq_temp_NR, output::file_Meq_temp_CS);
