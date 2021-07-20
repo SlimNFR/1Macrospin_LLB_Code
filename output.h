@@ -16,10 +16,11 @@
 namespace output{
 	
 //---Variables
-extern std::ofstream file_NR, file_interpol; 
-extern std::ofstream file_chi_vs_T;
-extern std::ofstream file_K_vs_T;
-extern std::ofstream file_magn_vs_time_equilibrate;
+extern std::ofstream file_Meq_temp_NR;//NR=Newton-Raphson
+extern std::ofstream file_Meq_temp_CS;//CS=cubicspline
+extern std::ofstream file_X_temp;//X=susceptibility
+extern std::ofstream file_K_temp;
+extern std::ofstream file_M_time;
 //---Functions
 int open_files_to_write();
 int close_files();

@@ -15,6 +15,10 @@ double mx;
 double my;
 double mz;
 
+double checkpoint_mx;
+double checkpoint_my;
+double checkpoint_mz;
+
 
 //---Functions
 int update_magnetisation(double mx_in,double my_in, double mz_in,

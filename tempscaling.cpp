@@ -246,7 +246,7 @@ namespace tempscaling{
 			tempscaling::m_vs_T_curve_f(input::Tc, input::eps, 
 										cubicspline::x_interpol, cubicspline::y_interpol,
 										cubicspline::b, cubicspline::c, cubicspline::d,
-										output::file_NR, output::file_interpol);
+										output::file_Meq_temp_NR, output::file_Meq_temp_CS);
 			return 0;
 		}
 
@@ -254,7 +254,7 @@ namespace tempscaling{
 		{	//this function will run a simulation to obtain the full me_vs(T) curve.
 			tempscaling::chipar_vs_T_curve_f(input::Tc, input::eps,input::mu_s,
 											 cubicspline::x_interpol, cubicspline::y_interpol,
-											 cubicspline::b,cubicspline::c, cubicspline::d, output::file_chi_vs_T);
+											 cubicspline::b,cubicspline::c, cubicspline::d, output::file_X_temp);
 			return 0;
 		}
 
@@ -264,7 +264,7 @@ namespace tempscaling{
 
 			tempscaling::K_vs_T_curve_f(input::Tc, input::K0_SI, 
 										cubicspline::x_interpol, cubicspline::y_interpol,
-										cubicspline::b, cubicspline::c, cubicspline::d, output::file_K_vs_T);
+										cubicspline::b, cubicspline::c, cubicspline::d, output::file_K_temp);
 
 			return 0;
 

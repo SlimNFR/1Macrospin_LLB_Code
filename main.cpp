@@ -20,8 +20,9 @@ int main()
 
 
 init::internal::run();
-//std::cout<<"T: "<<input::T<<"| B_app: "<<input::B_app<<" "<<"\n";
-output::close_files();
+
+init::internal::end();
+
 return 0;
 }
 

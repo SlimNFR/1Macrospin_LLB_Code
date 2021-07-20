@@ -2,7 +2,7 @@
 
 
 //---Standard libraries
-
+#include<chrono>
 
 //---User-defined libraries
 #include"init.h"
@@ -17,7 +17,9 @@
 namespace init{
 	
 //---Variables
-
+std::chrono::high_resolution_clock::time_point RUN_TIME_START;
+std::chrono::high_resolution_clock::time_point RUN_TIME_END;
+double RUN_TIME_TOTAL;
 
 
 //---Functions
@@ -60,9 +62,22 @@ int sim()
 		tempscaling::internal::calc_parameters_at_T();
 		simulation::equilibrate_system(input::mx_0, input::my_0, input::mz_0,
 									   particle::mx, particle::my, particle::mz,
-									   simulation::time,
+									   simulation::equil_sim_time, input::T, input::TOL_EQ,
 							   		   input::t_min_equil, input::t_max_equil, input::delta_t_equil, input::timescale_equil, 
-							   		   output::file_magn_vs_time_equilibrate);
+							   		   output::file_M_time);
+
+	}
+
+	if(input::laser_dynamics == true)
+	{
+
+		simulation::squared_pulse_dynamics(particle::mx, particle::my, particle::mz,
+										   particle::mx, particle::my, particle::mz,
+										   simulation::laser_sim_time, simulation::equil_sim_time, 
+										   input::T, input::TOL_LD,
+										   input::t_min_laser_dynamics, input::t_max_laser_dynamics,input::delta_t_laser_dynamics, input::timescale_laser_dynamics,
+										   input::pulse_duration, input::T_pulse, 
+										   output::file_M_time);
 
 	}
 
@@ -81,14 +96,27 @@ namespace init{
 	namespace internal{
 		int run()
 		{//This function will run the code
-
+			init::RUN_TIME_START=std::chrono::high_resolution_clock::now();
 			init::parameters();
 			init::files();
 			init:sim();
 			return 0;
+		}
+
+		int end()
+		{
+
+			output::close_files();
+			init::RUN_TIME_START=std::chrono::high_resolution_clock::now();
+			init::RUN_TIME_TOTAL=std::chrono::duration_cast<std::chrono::seconds>(init::RUN_TIME_END - init::RUN_TIME_END).count();
+			std::cout<<"Total run time: "<<init::RUN_TIME_TOTAL<<" s"<<"\n";
+			return 0;
+
 		}	
 	}
 }
+
+
 
 
 //---End of init.cpp file.

@@ -37,7 +37,7 @@ double chi_perp; //Perpendicular susceptibility: []
 
 // //---Simulation paramters
 double T=300.0; // Magnetic moment temperature (electron temperature in this model): [K]
-double B_app=1.0; // External field amplitude: [T]
+double B_app=2.0; // External field amplitude: [T]
 double B_theta=30.0*M_PI/180.0;//angle with respect to EA
 double B_phi=0.0*M_PI/180.0; //Angle between in-plane field projection and the Ox axis
 double bx = sin(B_theta)*cos(B_phi); // H_ext_x/H_ext 

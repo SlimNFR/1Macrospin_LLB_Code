@@ -53,14 +53,21 @@ extern double alpha_par; //Longitudinal damping parameter: adimensional. Avail. 
 extern double alpha_perp; //Transversal damping parameter: adimensional. Avail. only for T<Tc
 
 const int t_min_equil=0; // Time will be given as an integer. It needs to be multiplied with 10^-12 at the end.
-const int t_max_equil=30000;
-const int delta_t_equil=1;
-const double timescale_equil=10*1e-15;
+const int t_max_equil=400000;
+const int delta_t_equil=10;
+const double timescale_equil=1e-15;
+const double TOL_EQ = 1e-4;//Tolerance for stopping condition using the torque modulus.
 
 
 const int t_min_laser_dynamics=0;
-const int t_max_laser_dynamics=40000;
+const int t_max_laser_dynamics=400000;
+const int delta_t_laser_dynamics=10;
 const double timescale_laser_dynamics = 1e-15;
+const double TOL_LD = 1e-4;
+
+
+const int pulse_duration = 10000; //fs !!Important, this needs to be in the same time unit as the timescale_laser_dynamics
+const double T_pulse  = 600.0;
 
 //---Initial conditions
 const double mx_0 = 1.0;
@@ -73,6 +80,7 @@ const bool m_vs_T_curve = false;
 const bool chipar_vs_T_curve = false;
 const bool K_vs_T_curve = false;
 const bool equilibrate = true;
+const bool laser_dynamics = true;
 
 
 }
