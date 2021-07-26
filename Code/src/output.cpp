@@ -18,7 +18,7 @@ std::ofstream file_Meq_temp_NR;//NR=Newton-Raphson
 std::ofstream file_Meq_temp_CS;//CS=cubicspline
 std::ofstream file_X_temp;//X=susceptibility
 std::ofstream file_K_temp;
-std::ofstream file_M_time;
+std::ofstream file_M_time;   
 
 //---Functions
 int open_files_to_write()

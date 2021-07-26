@@ -26,6 +26,8 @@ double RUN_TIME_TOTAL;
 int parameters()
 {	//This function will initialise my simulation parameters
 
+	input::read_material_parameters();
+	input::read_simulation_parameters();
 	tempscaling::internal::obtain_interpolation_polynome_mVsT_data(); //initialise me_vs_T interpolation function
 	return 0;
 }
