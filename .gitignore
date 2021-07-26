@@ -1,3 +1,6 @@
 output_*
 *.gnu
 Data/*
+*.out
+*.pdf
+*.png
