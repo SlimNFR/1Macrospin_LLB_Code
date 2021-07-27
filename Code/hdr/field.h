@@ -39,6 +39,7 @@ int longitudinal_f(double mx, double my, double mz,
 
 int effective_f(double Bx_ani, double By_ani, double Bz_ani,
 				double Bx_app, double By_app, double Bz_app,
+                double Bx_lon, double By_lon, double Bz_lon,
 				double &Bx_eff, double &By_eff, double &Bz_eff);
 
 int effective_torque(double mx, double my, double mz,

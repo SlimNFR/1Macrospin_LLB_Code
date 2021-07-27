@@ -84,6 +84,7 @@ int longitudinal_f(double mx, double my, double mz,
 
 int effective_f(double Bx_ani, double By_ani, double Bz_ani,
 				double Bx_app, double By_app, double Bz_app,
+				double Bx_lon, double By_lon, double Bz_lon,
 				double &Bx_eff, double &By_eff, double &Bz_eff)
 {
 	//calculates the total field (effective) components
@@ -128,6 +129,7 @@ int calculate()
 
 	field::effective_f(field::Bx_ani, field::By_ani, field::Bz_ani,
 					   field::Bx_app, field::By_app, field::Bz_app,
+					   field::Bx_lon, field::By_lon, field::Bz_lon,
 					   field::Bx_eff, field::By_eff, field::Bz_eff);
 
 	field::effective_torque(particle::mx, particle::my, particle::mz,
