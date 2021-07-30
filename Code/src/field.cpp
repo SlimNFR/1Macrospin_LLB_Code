@@ -37,8 +37,8 @@ int uniax_anis_f(double mx, double my, double mz,
 	Bx_ani = Hk*(mx*ex + my*ey + mz*ez)*ex;
 	By_ani = Hk*(mx*ex + my*ey + mz*ez)*ey;
 	Bz_ani = Hk*(mx*ex + my*ey + mz*ez)*ez;
-
-	//std::cout<<"Within function"<<Bx_ani<<" "<<By_ani<<" "<<Bz_ani<<"\n";
+//	std::cout<<"Hk: "<<Hk<<" Ms:"<<Ms<<"K: "<<K<<"\n";
+//	std::cout<<"Within function"<<"Bx_ani: "<<Bx_ani<<" By_ani: "<<By_ani<<" Bz_ani:"<<Bz_ani<<"\n";
 	//std::cout<<"Within function"<<mx<<" "<<my<<" "<<mz<<"\n";
 	//std::cout<<"Within function"<<ex<<" "<<ey<<" "<<ez<<"\n";
 
@@ -54,6 +54,8 @@ int zeeman_f(double B_app, double bx, double by, double bz,
 	Bx_app=B_app*bx;
 	By_app=B_app*by;
 	Bz_app=B_app*bz;
+
+//	std::cout<<"Bx_app: "<<Bx_app<<"By_app:"<<By_app<<"Bz_app:"<<Bz_app<<"\n";
 
 	return 0;
 }
@@ -76,6 +78,8 @@ int longitudinal_f(double mx, double my, double mz,
 	Bx_lon = pre_factor*mx;
 	By_lon = pre_factor*my;
 	Bz_lon = pre_factor*mz;
+
+//	std::cout<<"Bx_lon: "<<Bx_lon<<"By_lon: "<<By_lon<<"Bz_lon: "<<Bz_lon<<"\n";
 
 	return 0;
 
@@ -123,6 +127,7 @@ int calculate()
 	field::zeeman_f(input::B_app, input::bx, input::by, input::bz,
 					field::Bx_app, field::By_app, field::Bz_app);
 
+
 	field::longitudinal_f(particle::mx, particle::my, particle::mz,
 			   		      input::chi_par, input::m_e,
 				          field::Bx_lon, field::By_lon, field::Bz_lon);
@@ -142,7 +147,3 @@ int calculate()
 }
 
 }
-
-
-//---End of field.cpp file.
-

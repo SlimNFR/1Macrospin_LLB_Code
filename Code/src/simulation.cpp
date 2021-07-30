@@ -50,9 +50,6 @@ int squared_pulse_dynamics(double mx_0, double my_0, double mz_0,
 	my_n1 = my_0;
 	mz_n1 = mz_0;
 
-	//Define LLB parameters
-	gamma=input::gamma; alpha_par=input::alpha_par; alpha_perp=input::alpha_perp;
-
 	//Time loop
 	for(t=t_start; t<=t_end; t=t+t_step) 
 	{	
@@ -83,13 +80,16 @@ int squared_pulse_dynamics(double mx_0, double my_0, double mz_0,
 
 		field::calculate(); //Compute the field at each new step
 		//Assign the newly obtained field and torque values to the temporary variables below.
-		Bx_eff = field::Bx_eff; By_eff = field::By_eff; Bz_eff = field::Bz_eff;
+		Bx_eff = field::Bx_eff; By_eff = field::By_eff; Bz_eff = field::Bz_eff;	
 		torque_mod=field::torque_mod;
+		gamma=input::gamma; alpha_par=input::alpha_par; alpha_perp=input::alpha_perp;
+
 
 		if( fabs(torque_mod)<TOL &&  (t-t_start) > pulse_duration )break; //Wait until after the pulse is taken off to apply the breaking condition.
 																		  //Otherwise the code might stop just because I start from an equilibrium position.
 
 		//Get the next magnetisation value
+		
 		solver::heun_scheme_step(equation::LLB_classic,
 								 mx_0,my_0,mz_0,
 								 gamma, alpha_par, alpha_perp,
@@ -129,8 +129,6 @@ int equilibrate_system(double mx_0, double my_0, double mz_0,
 	my_n1 = my_0;
 	mz_n1 = mz_0;
 
-	//Define LLB parameters
-	gamma=input::gamma; alpha_par=input::alpha_par; alpha_perp=input::alpha_perp;
 
 	//Time loop
 	for(int t=t_start; t<=t_end; t=t+t_step)
@@ -142,7 +140,9 @@ int equilibrate_system(double mx_0, double my_0, double mz_0,
 		field::calculate(); //Compute the field at each new step
 		//Assign the newly obtained field and torque values to the temporary variables below.
 		Bx_eff = field::Bx_eff; By_eff = field::By_eff; Bz_eff = field::Bz_eff;
-		torque_mod=field::torque_mod; 
+		torque_mod=field::torque_mod;
+		gamma=input::gamma; alpha_par=input::alpha_par; alpha_perp=input::alpha_perp;
+
 
 		if(fabs(torque_mod)<TOL)break;//Stopping condition.
 
