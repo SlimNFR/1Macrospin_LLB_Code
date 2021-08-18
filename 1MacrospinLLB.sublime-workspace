@@ -1,0 +1,702 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"B",
+				"B_theta"
+			],
+			[
+				"K0",
+				"K0_CGS"
+			],
+			[
+				"K",
+				"K0_CGS"
+			],
+			[
+				"read",
+				"read_material_parameters"
+			],
+			[
+				"chi",
+				"chipar_vs_T_curve"
+			],
+			[
+				"mvs",
+				"m_vs_T_curve"
+			],
+			[
+				"TOL",
+				"TOL_LD"
+			],
+			[
+				"timesc",
+				"timescale_laser_dynamics"
+			],
+			[
+				"times",
+				"timescale_laser_dynamics"
+			],
+			[
+				"del",
+				"delta_t_laser_dynamics"
+			],
+			[
+				"delt",
+				"delta_t_laser_dynamics"
+			],
+			[
+				"t_min",
+				"t_min_laser_dynamics"
+			],
+			[
+				"t_mi",
+				"t_min_laser_dynamics"
+			],
+			[
+				"time",
+				"timescale_equil"
+			],
+			[
+				"M",
+				"Ms0_SI"
+			],
+			[
+				"Ms",
+				"Ms0_CGS"
+			],
+			[
+				"file_Meq",
+				"file_Meq_temp_NR"
+			],
+			[
+				"file_Meq_",
+				"file_Meq_temp_NR"
+			],
+			[
+				"RUN",
+				"RUN_TIME_TOTAL"
+			],
+			[
+				"run",
+				"RUN_TIME_START"
+			],
+			[
+				"check",
+				"checkpoint_mx"
+			],
+			[
+				"equi",
+				"equil_sim_time"
+			],
+			[
+				"equil",
+				"equil_sim_time"
+			],
+			[
+				"las",
+				"laser_sim_time"
+			],
+			[
+				"EQ",
+				"EQ_REAL_t"
+			],
+			[
+				"t_ma",
+				"t_max_laser_dynamics"
+			],
+			[
+				"equilibra",
+				"equilibration_time"
+			],
+			[
+				"equ",
+				"equil_time"
+			],
+			[
+				"file_m",
+				"file_laser_dynamics"
+			],
+			[
+				"file",
+				"file_laser_dynamcis"
+			],
+			[
+				"t_st",
+				"t_start"
+			],
+			[
+				"ts",
+				"t_start"
+			],
+			[
+				"t",
+				"t_start"
+			],
+			[
+				"lase",
+				"t_max_laser_dynamics"
+			],
+			[
+				"t_lase",
+				"t_min_laser_dynamics"
+			],
+			[
+				"torq",
+				"torque_mod"
+			],
+			[
+				"torqu",
+				"torque_mod"
+			],
+			[
+				"torque",
+				"torque_mod"
+			],
+			[
+				"tor",
+				"torque_y"
+			],
+			[
+				"to",
+				"torque_x"
+			],
+			[
+				"m",
+				"mx_n1"
+			],
+			[
+				"mx",
+				"mx_n1"
+			],
+			[
+				"Bz",
+				"Bz_lon"
+			],
+			[
+				"my",
+				"my_n1"
+			],
+			[
+				"B_ap",
+				"B_app"
+			],
+			[
+				"alpha",
+				"alpha_perp"
+			],
+			[
+				"tim",
+				"t_min_equil"
+			],
+			[
+				"f",
+				"file_magn_vs_time_equilibrate"
+			],
+			[
+				"eq",
+				"equilibrate_system"
+			],
+			[
+				"calc",
+				"calc_parameters_at_T"
+			],
+			[
+				"alp",
+				"alpha_par"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"REAL",
+				"REAL_DT"
+			],
+			[
+				"Bx",
+				"Bx_eff"
+			],
+			[
+				"mz",
+				"mz_n1"
+			],
+			[
+				"fil",
+				"file_K_vs_T"
+			],
+			[
+				"k",
+				"K_vs_T_curve"
+			],
+			[
+				"temp",
+				"temp_T"
+			],
+			[
+				"inte",
+				"interpolate_mVsT_points"
+			],
+			[
+				"get",
+				"get_mVsT_points_to_interpol"
+			],
+			[
+				"ge",
+				"get_mVsT_points_to_interpol"
+			],
+			[
+				"x",
+				"x_interpol"
+			],
+			[
+				"Curi",
+				"CurieWeiss_df"
+			],
+			[
+				"main",
+				"main_file"
+			],
+			[
+				"y",
+				"y_to_interpol"
+			],
+			[
+				"vec",
+				"vec_size"
+			],
+			[
+				"cub",
+				"CubicSplineInterpol"
+			],
+			[
+				"Lagra",
+				"interpolareLagrange"
+			],
+			[
+				"res",
+				"resize"
+			],
+			[
+				"l",
+				"x_lagrange"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"pus",
+				"push_back"
+			],
+			[
+				"By",
+				"By_lon"
+			],
+			[
+				"fz",
+				"fz_n"
+			],
+			[
+				"fy",
+				"fy_n"
+			],
+			[
+				"fx",
+				"fx_n"
+			],
+			[
+				"REAL_",
+				"REAL_T"
+			],
+			[
+				"Ms_",
+				"Ms_SI"
+			],
+			[
+				"By_",
+				"By_app"
+			],
+			[
+				"Byan",
+				"By_ani"
+			],
+			[
+				"Bz_",
+				"Bz_eff"
+			],
+			[
+				"Bx_",
+				"Bx_app"
+			],
+			[
+				"mn1",
+				"mn1_x"
+			],
+			[
+				"alpha_",
+				"alpha_par"
+			],
+			[
+				"H",
+				"Hz_eff"
+			],
+			[
+				"alpha_p",
+				"alpha_par"
+			],
+			[
+				"df",
+				"df_z"
+			],
+			[
+				"al",
+				"alpha_perp"
+			],
+			[
+				"uniax_a",
+				"uniax_anis"
+			],
+			[
+				"pair",
+				"pair_lines"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pacl",
+				"Package Control: Install Package"
+			],
+			[
+				"openres",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"pac",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"snippe",
+				"Selection: Expand to Scope"
+			],
+			[
+				"pack",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"package op",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"PackageRe",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Pac",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Pack",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp",
+				"Snippet: New header file C++"
+			],
+			[
+				"Snippet: ",
+				"Snippet: New header file C++"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src"
+	],
+	"file_history":
+	[
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/energy.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/equation.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/field.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/init.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/input.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/interpolate.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/material.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/output.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/particle.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/rootfind.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/simulation.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/solver.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/hdr/tempscaling.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/energy.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/equation.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/field.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/init.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/input.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/interpolate.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/main.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/material.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/output.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/particle.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/rootfind.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/simulation.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/solver.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/Code/src/tempscaling.cpp",
+		"/home/slimnfr/.config/sublime-text-3/Packages/C++/C++ Single File.sublime-build",
+		"/home/slimnfr/.config/sublime-text-3/Packages/C++/Snippets/#ifndef-#define-#endif.sublime-snippet",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/equation.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/equation.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/input.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/input.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/tempscaling.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/solver.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/particle.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/particle.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/solver.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/simulation.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/simulation.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/init.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/main.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/output.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/output.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/field.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/field.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/tempscaling.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/init.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/interpolate.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/rootfind.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/rootfind.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/interpolate.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/dynamics.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/dynamics.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/material.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/energy.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/material.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/energy.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/interp",
+		"/home/slimnfr/Desktop/MvsT_code/CubicSpline.cpp",
+		"/home/slimnfr/Desktop/MvsT_code/CubicSpline.h",
+		"/home/slimnfr/Desktop/MvsT_code/interpolare_lagrange.cpp",
+		"/home/slimnfr/Desktop/MvsT_code/Newton_Raphson_trans_eq.cpp",
+		"/home/slimnfr/Desktop/MvsT_code/rootfind.cpp",
+		"/home/slimnfr/Desktop/MvsT_code/rootfind.h",
+		"/home/slimnfr/Desktop/MvsT_code/main.cpp",
+		"/home/slimnfr/Desktop/MvsT_code/CubicSpline.c",
+		"/home/slimnfr/Desktop/MvsT_code/Cubic",
+		"/home/slimnfr/Desktop/MvsT_code/interpolare_newton.cpp",
+		"/home/slimnfr/Desktop/MvsT_code/interpolare_newton.c",
+		"/home/slimnfr/Desktop/bisect_method.cpp",
+		"/home/slimnfr/Desktop/langevin.py",
+		"/home/slimnfr/Desktop/Newton_Raphson_trans_eq.cpp",
+		"/home/slimnfr/Desktop/bisect_method2.cpp",
+		"/home/slimnfr/Desktop/trans_eq.cpp",
+		"/home/slimnfr/.config/sublime-text-3/Packages/User/New_source_file_cpp_C++.sublime-snippet",
+		"/home/slimnfr/.config/sublime-text-3/Packages/User/a.cpp",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/spin.h",
+		"/home/slimnfr/Desktop/One-Macrospin_LLB-code/spin.cpp",
+		"/home/slimnfr/.config/sublime-text-3/Packages/User/New_head_file_h_C++.sublime-snippet",
+		"/home/slimnfr/.config/sublime-text-3/Packages/User/New_main_file_cpp_C++.sublime-snippet",
+		"/home/slimnfr/Desktop/Unai_thesis_comments",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/8_problem.py",
+		"/home/slimnfr/Desktop/Python/The_Python_Challenge/Challenge_2.py",
+		"/home/slimnfr/Desktop/Python/The_Python_Challenge/ChaChallenge_2",
+		"/home/slimnfr/.config/sublime-text-3/Packages/Python/Python.sublime-syntax",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/7_problem.py",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/6_problem.py",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/5_problem.py",
+		"/home/slimnfr/Desktop/text.txt",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/2_problem.py",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/4_problem.py",
+		"/home/slimnfr/Desktop/Python/Code_Abbey/3_problem.py",
+		"/home/slimnfr/Desktop/Code Abbey/3_problem .py",
+		"/home/slimnfr/Desktop/test.py",
+		"/home/slimnfr/Desktop/Python Course/test.py",
+		"/home/slimnfr/Desktop/PythonCourse/PackagesAndModules/myprogram.py",
+		"/home/slimnfr/Desktop/PythonCourse/Complete-Python-3-Bootcamp-master/12-Advanced Python Modules/08-Advanced-Python-Module-Exercise/extracted_data/extracted_content/MySolution.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"eps",
+			"f1",
+			"y"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "1MacrospinLLB.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/Multiple-Macrospins_LLB-code/MultipleMacrospinsLLB.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 145.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
